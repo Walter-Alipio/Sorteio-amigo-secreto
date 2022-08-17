@@ -1,16 +1,28 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import Card from '../components/Card/Card';
 import { useDraftResults } from '../state/hooks/useDraftResults';
 import { useParticipantsList } from '../state/hooks/useParticipantsList';
+import { Title } from './Configuration';
 
 const Section = styled.section`
 	font-size: 1.5625rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const Form = styled.form`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 `;
 
 const Select = styled.select`
 	width: 100%;
 	border-radius: 45px;
-	height: 5.125rem;
+	height: 3rem;
 	box-sizing: border-box;
 	padding: 0 2rem;
 	border: 2px solid black;
@@ -21,7 +33,8 @@ const Select = styled.select`
 	}
 
 	@media (min-width: 800px) {
-		width: 70%;
+		height: 5.125rem;
+		width: 100%;
 	}
 `;
 
@@ -61,9 +74,15 @@ const Image = styled.img.attrs({
 	color: #fe652bfc;
 `;
 
-const Alert = styled.p`
+const Paragraph = styled.p`
 	font-weight: 200;
 	margin: 2rem 0;
+	text-align: center;
+	font-size: 1.25rem;
+
+	@media (min-width: 800px) {
+		font-size: 1.5625rem;
+	}
 `;
 
 const DrawNames = () => {
@@ -82,27 +101,33 @@ const DrawNames = () => {
 	};
 
 	return (
-		<Section>
-			<form onSubmit={draft}>
-				<Select
-					required
-					name='participantOfTheTime'
-					id='participantOfTheTime'
-					placeholder='Selecione o seu nome'
-					value={participantOfTheTime}
-					onChange={event => setParticipantOfTheTime(event.target.value)}
-				>
-					{participants.map(participant => (
-						<option key={participant}>{participant}</option>
-					))}
-				</Select>
-				<Button>Sortear</Button>
-			</form>
-			{secretSanta && <Alert role='alert'>{secretSanta}</Alert>}
-			<Footer>
-				<Image />
-			</Footer>
-		</Section>
+		<Card>
+			<Section>
+				<Title>Quem vai tirar o papelzinho?</Title>
+				<Form onSubmit={draft}>
+					<Select
+						required
+						name='participantOfTheTime'
+						id='participantOfTheTime'
+						placeholder='Selecione o seu nome'
+						value={participantOfTheTime}
+						onChange={event => setParticipantOfTheTime(event.target.value)}
+					>
+						{participants.map(participant => (
+							<option key={participant}>{participant}</option>
+						))}
+					</Select>
+					<Paragraph>
+						Clique em em sortear para ver quem é seu amigo secreto!
+					</Paragraph>
+					<Button>Sortear</Button>
+				</Form>
+				{secretSanta && <Paragraph role='alert'>{secretSanta}</Paragraph>}
+				<Footer>
+					<Image />
+				</Footer>
+			</Section>
+		</Card>
 	);
 };
 

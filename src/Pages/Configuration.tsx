@@ -10,11 +10,12 @@ const Container = styled.section`
 	max-width: 900px;
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
 	color: rgba(75, 105, 253, 0.99);
 	font-weight: 600;
 	font-size: 1.25rem;
 	padding-bottom: 4rem;
+	text-align: center;
 
 	@media (min-width: 800px) {
 		font-size: 2rem;
