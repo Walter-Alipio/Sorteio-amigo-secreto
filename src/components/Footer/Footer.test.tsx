@@ -19,6 +19,14 @@ jest.mock('react-router-dom', () => {
 	};
 });
 
+const mockDraft = jest.fn();
+
+jest.mock('../../state/hooks/useDraft', () => {
+	return {
+		useDraft: () => mockDraft,
+	};
+});
+
 describe('Onde não existem participantes suficientes', () => {
 	//antes de cada teste, executar o mock
 	beforeEach(() => {
@@ -67,5 +75,6 @@ describe('Quando existem participantes suficientes', () => {
 
 		expect(mockNavigate).toHaveBeenCalledTimes(1);
 		expect(mockNavigate).toHaveBeenCalledWith('/sorteio');
+		expect(mockDraft).toHaveBeenCalledTimes(1);
 	});
 });

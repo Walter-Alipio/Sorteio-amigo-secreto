@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useDraft } from '../../state/hooks/useDraft';
 import { useParticipantsList } from '../../state/hooks/useParticipantsList';
 
 const FooterGroup = styled.footer`
@@ -52,9 +53,12 @@ const ImgBags = styled.img.attrs({
 const Footer = () => {
 	const participants = useParticipantsList();
 	const navigate = useNavigate();
+	const draft = useDraft();
 	const start = () => {
+		draft();
 		navigate('/sorteio');
 	};
+
 	return (
 		<FooterGroup>
 			<Button disabled={participants.length < 3} onClick={start}>
