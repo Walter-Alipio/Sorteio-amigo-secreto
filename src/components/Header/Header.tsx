@@ -19,13 +19,13 @@ const ImageLogo = styled.div`
 	background-size: contain;
 	object-fit: fill;
 	background-position: center;
-	width: 235px;
-	height: 199px;
+	width: 11.625rem;
+	height: 12.4375rem;
 	border: none;
 
 	@media (min-width: 800px) {
-		width: 351;
-		height: 117;
+		width: 21.9375rem;
+		height: 7.3125rem;
 		background-image: url('../../imagens/logo.png');
 	}
 `;
