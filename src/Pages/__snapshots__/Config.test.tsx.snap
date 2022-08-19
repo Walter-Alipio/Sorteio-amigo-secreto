@@ -18,13 +18,13 @@ exports[`A página de configuração Deve ser renderizada corretamente 1`] = `
           class="sc-eCYdqJ fPQdnt"
         >
           <input
-            class="sc-jSMfEi dksuKw"
+            class="sc-jSMfEi glASxr"
             placeholder="Insira os nomes dos participantes"
             type="text"
             value=""
           />
           <button
-            class="sc-jSMfEi sc-gKXOVf dksuKw gpvWOg"
+            class="sc-jSMfEi sc-gKXOVf glASxr kUqwbQ"
             disabled=""
           >
             Adicionar
@@ -37,14 +37,14 @@ exports[`A página de configuração Deve ser renderizada corretamente 1`] = `
         class="sc-gsnTZi bKhtBK"
       >
         <button
-          class="sc-dkzDqf BgahR"
+          class="sc-dkzDqf kzBkPq"
           disabled=""
         >
           Iniciar brincadeira
         </button>
         <img
           alt="Sacolas de compras"
-          class="sc-hKMtZM bLEpLu"
+          class="sc-hKMtZM gvFfar"
           src="/imagens/sacolas.png"
         />
       </footer>
