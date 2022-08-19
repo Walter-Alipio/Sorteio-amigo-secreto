@@ -4,7 +4,7 @@ const HeaderPage = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 3.7rem;
+	padding-top: 3rem;
 
 	@media (min-width: 800px) {
 		padding-top: 7rem;

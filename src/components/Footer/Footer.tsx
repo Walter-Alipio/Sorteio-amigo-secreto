@@ -17,13 +17,17 @@ const FooterGroup = styled.footer`
 const Button = styled.button`
 	width: 13.75rem;
 	margin: 2rem 0;
-	height: 5rem;
+	height: 3rem;
 	font-size: 1.25rem;
 	box-shadow: 2px 2px 0px 1px #000;
 	border-radius: 45px;
 	background-color: #fe652b;
 	color: #fff;
 	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 
 	&:disabled {
 		opacity: 0.6;
@@ -36,7 +40,18 @@ const Button = styled.button`
 
 	@media (min-width: 800px) {
 		width: 21.875rem;
+		height: 5rem;
 		margin: 0;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			background-image: url('/imagens/play_circle_outline.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 2.5rem;
+			height: 2.5rem;
+		}
 	}
 `;
 const ImgBags = styled.img.attrs({
@@ -44,6 +59,7 @@ const ImgBags = styled.img.attrs({
 	alt: 'Sacolas de compras',
 })`
 	margin-top: 32px;
+	height: 6.125rem;
 
 	@media (min-width: 800px) {
 		margin: 0;
