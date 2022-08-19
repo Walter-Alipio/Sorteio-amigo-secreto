@@ -41,12 +41,27 @@ const Select = styled.select`
 const Button = styled.button`
 	width: 13.75rem;
 	margin: 2rem 0;
-	height: 5rem;
+	height: 3rem;
 	box-shadow: 2px 2px 0px 1px #000;
 	border-radius: 45px;
 	background-color: #fe652b;
 	color: #fff;
 	cursor: pointer;
+	font-size: 1rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		background-image: url('/imagens/casino.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 2.5rem;
+		height: 2.5rem;
+	}
 
 	&:disabled {
 		opacity: 0.6;
@@ -59,7 +74,11 @@ const Button = styled.button`
 
 	@media (min-width: 800px) {
 		width: 21.875rem;
+		height: 5rem;
 		margin: 1rem 0;
+		font-size: 1.625rem;
+		justify-content: center;
+		gap: 1.5rem;
 	}
 `;
 
@@ -113,6 +132,7 @@ const DrawNames = () => {
 						value={participantOfTheTime}
 						onChange={event => setParticipantOfTheTime(event.target.value)}
 					>
+						<option>Selecione seu nome</option>
 						{participants.map(participant => (
 							<option key={participant}>{participant}</option>
 						))}
@@ -120,7 +140,7 @@ const DrawNames = () => {
 					<Paragraph>
 						Clique em em sortear para ver quem é seu amigo secreto!
 					</Paragraph>
-					<Button>Sortear</Button>
+					<Button>Sortear!</Button>
 				</Form>
 				{secretSanta && <Paragraph role='alert'>{secretSanta}</Paragraph>}
 				<Footer>
