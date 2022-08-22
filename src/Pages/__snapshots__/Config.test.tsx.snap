@@ -18,13 +18,13 @@ exports[`A página de configuração Deve ser renderizada corretamente 1`] = `
           class="sc-eCYdqJ fPQdnt"
         >
           <input
-            class="sc-jSMfEi glASxr"
+            class="sc-jSMfEi gdPKdK"
             placeholder="Insira os nomes dos participantes"
             type="text"
             value=""
           />
           <button
-            class="sc-jSMfEi sc-gKXOVf glASxr kUqwbQ"
+            class="sc-jSMfEi sc-gKXOVf gdPKdK fFBcTU"
             disabled=""
           >
             Adicionar
