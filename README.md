@@ -4,9 +4,12 @@
 
 Um Sorteador de Amigo Secreto para facilitar a brincadeira.
 
+<p p align="center" width="100%">
   <img src="https://i.imgur.com/gC2x1bq.png" alt="Página Inicial" width="50%">
-
+</p>
+<p p align="center" width="100%">
   <img src="https://i.imgur.com/OisNjYM.png" alt="Página de sorteio" width="50%">
+</p>
 
 ## 🔨 Objetivo do projeto
 
@@ -37,5 +40,5 @@ Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no se
 ## 📚 Certificado
 
 <p align="center" width="100%">
-  <img src="https://imgur.com/t2h8Yc7" alt="Certificado de conclusão">
+  <img src="https://i.imgur.com/jXbgfMt.jpg" alt="Certificado de conclusão">
 </p>
