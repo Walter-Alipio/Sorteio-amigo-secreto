@@ -18,14 +18,10 @@ const Input = styled.input`
 	box-shadow: 0px 2px 0px 1px #000;
 	margin-bottom: 1.125rem;
 
-	&::placeholder {
-		content: '';
-		display: inline-block;
+	&:placeholder-shown {
 		background-image: url('/imagens/person_add.svg');
 		background-position: 3% 50%;
 		background-repeat: no-repeat;
-		width: 2.5rem;
-		height: 2.5rem;
 		color: rgba(0, 0, 0, 0.3);
 	}
 	&:focus {
@@ -48,6 +44,7 @@ const Button = styled(Input)`
 	width: 13.75rem;
 	height: 3rem;
 	color: #000;
+	font-size: 1rem;
 	box-shadow: 2px 2px 0px 1px #000;
 	cursor: pointer;
 	background-color: #c4c4c4;
@@ -55,6 +52,10 @@ const Button = styled(Input)`
 	margin: 0 auto;
 	text-align: center;
 	padding: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&:hover {
 		opacity: 0.8;
@@ -71,6 +72,7 @@ const Button = styled(Input)`
 		border-bottom-left-radius: 0px;
 		border-top-right-radius: 45px;
 		border-bottom-right-radius: 45px;
+		font-size: 1.75rem;
 		width: 30%;
 		height: 5rem;
 	}
