@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Card from '../components/Card/Card';
 import { useDraftResults } from '../state/hooks/useDraftResults';
