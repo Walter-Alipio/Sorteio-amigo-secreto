@@ -4,9 +4,9 @@
 
 Um Sorteador de Amigo Secreto para facilitar a brincadeira.
 
-  <img src="https://imgur.com/gC2x1bq" alt="Página Inicial" width="50%">
+  <img src="https://i.imgur.com/gC2x1bq.png" alt="Página Inicial" width="50%">
 
-  <img src="https://imgur.com/OisNjYM" alt="Página de sorteio" width="50%">
+  <img src="https://i.imgur.com/OisNjYM.png" alt="Página de sorteio" width="50%">
 
 ## 🔨 Objetivo do projeto
 
