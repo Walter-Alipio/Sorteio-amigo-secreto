@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { RecoilRoot } from 'recoil';
 import { useDraftResults } from '../state/hooks/useDraftResults';
@@ -62,5 +62,33 @@ describe('A página de sorteio', () => {
 		const secretSanta = screen.getByRole('alert');
 
 		expect(secretSanta).toBeInTheDocument();
+	});
+
+	test('o amigo secreto some após o timer', async () => {
+		//necessário para rodar os timers
+		jest.useFakeTimers();
+		render(
+			<RecoilRoot>
+				<DrawNames />
+			</RecoilRoot>
+		);
+
+		const select = screen.getByPlaceholderText('Selecione o seu nome');
+		fireEvent.change(select, {
+			target: {
+				value: participants[1],
+			},
+		});
+
+		const buttonForm = screen.getByRole('button');
+
+		fireEvent.click(buttonForm);
+		/* fire events that update state */
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		const secretSanta = screen.queryByRole('alert');
+		expect(secretSanta).not.toBeInTheDocument();
 	});
 });

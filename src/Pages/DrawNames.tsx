@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Card from '../components/Card/Card';
 import { useDraftResults } from '../state/hooks/useDraftResults';
@@ -116,6 +116,9 @@ const DrawNames = () => {
 		event.preventDefault();
 		if (result.has(participantOfTheTime)) {
 			setSecretSanta(result.get(participantOfTheTime)!);
+			setTimeout(() => {
+				setSecretSanta('');
+			}, 5000);
 		}
 	};
 
